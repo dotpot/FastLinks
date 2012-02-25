@@ -22,27 +22,29 @@ def getLinks(content, url):
     content = content.lower()
     links = re.findall(_linksPattern, content)
     
-    for i in range(0, len(links)):
-        links[i] = links[i].replace('&amp;', '&')
-        if not links[i].startswith('http://'):
-            if links[i].find('..') != -1:
-                links[i] = normalize(url, links[i])
+    for i, link in enumerate(links):
+        link = link.replace('&amp;', '&')
+        if not link.startswith('http://'):
+            if link.find('..') != -1:
+                link = normalize(url, link)
 
-            if links[i].find(hostname) == -1:
-                links[i] = hostname + links[i]
+            if link.find(hostname) == -1:
+                link = hostname + link
 
-            links[i] = links[i].replace('//', '/')
-            links[i] = 'http://' + links[i]
+            link = link.replace('//', '/')
+            link = 'http://' + link
 
         # Specific cases  ( maybe there is much more easier way of doing this? )       
-        if links[i].find('//', 7) != -1 or links[i].count('http:') > 1:
-            links[i] = links[i].replace('http:', '')
-            links[i] = links[i].replace('//', '')
-            links[i] = 'http://' + links[i]
-            links[i] = links[i].replace('///', '//')
+        if link.find('//', 7) != -1 or link.count('http:') > 1:
+            link = link.replace('http:', '')
+            link = link.replace('//', '')
+            link = 'http://' + link
+            link = link.replace('///', '//')
 
-        if links[i].find('\/') != -1:
-            links[i] = links[i].replace('\/', '/')
+        if link.find('\/') != -1:
+            link = link.replace('\/', '/')
+            
+        links[i] = link
             
     # return duplicates free list of links
     return list(set(links))
