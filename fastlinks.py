@@ -42,6 +42,7 @@ def getLinks(content, url):
             links[i] = links[i].replace('///', '//')
 
         if links[i].find('\/') != -1:
-            linsk[i] = links[i].replace('\/', '/')
-
+            links[i] = links[i].replace('\/', '/')
+            
+    # return duplicates free list of links
     return list(set(links))
