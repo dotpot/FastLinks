@@ -1,7 +1,7 @@
 ##FastLinks
 *Missing simple links parser for python & humans*
 
-Use this compoent if you want to get **http links** from content in a **fast** ( **very** ) way.
+Use this component if you want to get **http links** from content in a **fast** ( **very** ) way.
 
 ###Overview
 
