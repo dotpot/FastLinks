@@ -1,4 +1,5 @@
 import re, urlparse, posixpath
+
 __author__ = 'Lukas Salkauskas'
 
 _linksPattern = re.compile(r'(?:href|src|url)=[\'"]?([^\'">]+)')

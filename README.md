@@ -39,3 +39,5 @@ output:
 
 ![image](http://img193.imageshack.us/img193/5605/tumblrlznr805hcb1r3zat8.png)
 
+
+### Also you can try (more power on data mining) [CustomStringParser](https://github.com/dotpot/Custom-String-Parser)
