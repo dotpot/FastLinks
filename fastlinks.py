@@ -11,6 +11,9 @@ def normalize(base,url):
     return urlparse.urlunparse((url.scheme, url.netloc, path, url.params, url.query, url.fragment))
 
 def getLinks(content, url):
+    if content is None or url is None:
+        return None
+
     """
     Possible todo:
      - Integrate extraction of link text.
@@ -25,7 +28,7 @@ def getLinks(content, url):
     
     for i, link in enumerate(links):
         link = link.replace('&amp;', '&')
-        if not link.startswith('http://'):
+        if not link.startswith('http://') and not link.startswith('https://'):
             if link.find('..') != -1:
                 link = normalize(url, link)
 

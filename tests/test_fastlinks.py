@@ -44,6 +44,17 @@ class TestFastLinks(TestCase):
                 expectedResult = False
 
         self.assertEqual(True, expectedResult)
+
+    def test_getLinksHttps(self):
+        content = """
+            <a href="https://www.facebooks.com/hellowthere"> asdfsadf </a>
+            """
+
+        links = getLinks(content, 'http://www.testsite.com/')
+
+        self.assertEqual('https://www.facebooks.com/hellowthere', links[0])
+
+
     def test_normalize(self):
         actual = ''
         expected = ''
