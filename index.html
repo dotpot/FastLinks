@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Fastlinks by dotpot</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Fastlinks</h1>
+        <p>Fast links parser for Python &amp; Humans</p>
+        <p class="view"><a href="https://github.com/dotpot/FastLinks">View the Project on GitHub <small>dotpot/FastLinks</small></a></p>
+        <ul>
+          <li><a href="https://github.com/dotpot/FastLinks/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dotpot/FastLinks/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dotpot/FastLinks">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>##FastLinks
+<em>Missing simple links parser for python &amp; humans</em></p>
+
+<p>Use this component if you want to get <strong>http links</strong> from content in a <strong>fast</strong> ( <strong>very</strong> ) way.</p>
+
+<p>###Overview</p>
+
+<p>Imagine you have this html content:</p>
+
+<pre><code>&lt;LINK REL="SHORTCUT ICON" HREF="favicon.ico" /&gt;
+
+src='/clickme.php?id=10&amp;amp;stats=23d'
+
+URL="<a href="http://www.testsite.com/verygood.html">http://www.testsite.com/verygood.html</a>"
+
+href='<a href="http://www.testsite.com/hello">www.testsite.com/hello</a> placentas/word.htm'
+href='../test.html'
+</code></pre>
+
+<p>And all you want to do is just get list of normal looking links from it.</p>
+
+<p>###You can do it now!!</p>
+
+<p>just:</p>
+
+<pre><code> links = getLinks(content, '<a href="http://www.testsite.com/'">http://www.testsite.com/'</a>)
+</code></pre>
+
+<h4>Isn't that trolololowesome ?!</h4>
+
+<p>output:</p>
+
+<pre><code>[1] <a href="http://www.testsite.com/test.html">http://www.testsite.com/test.html</a>
+[2] <a href="http://www.testsite.com/hello">http://www.testsite.com/hello</a> placentas/word.htm
+[3] <a href="http://www.testsite.com/favicon.ico">http://www.testsite.com/favicon.ico</a>
+[4] <a href="http://www.testsite.com/verygood.html">http://www.testsite.com/verygood.html</a>
+[5] <a href="http://www.testsite.com/clickme.php?id=10&amp;stats=23d">http://www.testsite.com/clickme.php?id=10&amp;stats=23d</a>
+</code></pre>
+
+<h3>Please feel free to improve it if you like :)</h3>
+
+<p><img src="http://img193.imageshack.us/img193/5605/tumblrlznr805hcb1r3zat8.png" alt="image"></p>
+
+<h3>Also you can try (more power on data mining) <a href="https://github.com/dotpot/Custom-String-Parser">CustomStringParser</a>
+</h3>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/dotpot">dotpot</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
