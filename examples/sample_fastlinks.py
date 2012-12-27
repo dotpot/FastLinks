@@ -1,4 +1,4 @@
-from fastlinks import getLinks
+from fastlinks import get_links
 
 __author__ = 'Lukas Salkauskas'
 
@@ -17,7 +17,7 @@ def main():
     href='../test.html'
         """
 
-    links = getLinks(content, 'http://www.testsite.com/heelo/planet')
+    links = get_links(content, 'http://www.testsite.com/heelo/planet')
     for i in range(0, len(links)):
         print '[' + str(i + 1) + '] ' + links[i]
 

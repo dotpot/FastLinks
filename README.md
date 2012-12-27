@@ -23,7 +23,7 @@ And all you want to do is just get list of normal looking links from it.
 
 just:
 
-	 links = getLinks(content, 'http://www.testsite.com/')
+	 links = get_links(content, 'http://www.testsite.com/')
 
 #### Isn't that trolololowesome ?!
 

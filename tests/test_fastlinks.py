@@ -10,7 +10,7 @@ class TestFastLinks(TestCase):
     def tearDown(self):
         pass
 
-    def test_getLinks(self):
+    def test_get_links(self):
         # Provide sample content
         content = """
         <LINK REL="SHORTCUT ICON" HREF="favicon.ico" />
@@ -23,7 +23,7 @@ class TestFastLinks(TestCase):
         href='../test.html'
         """
 
-        links = getLinks(content, 'http://www.testsite.com')
+        links = get_links(content, 'http://www.testsite.com')
 
         # Check count of links.
         self.assertEqual(5, len(links))
@@ -50,7 +50,7 @@ class TestFastLinks(TestCase):
             <a href="https://www.facebooks.com/hellowthere"> asdfsadf </a>
             """
 
-        links = getLinks(content, 'http://www.testsite.com/')
+        links = get_links(content, 'http://www.testsite.com/')
 
         self.assertEqual('https://www.facebooks.com/hellowthere', links[0])
 
